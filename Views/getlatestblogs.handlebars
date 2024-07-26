@@ -1,0 +1,31 @@
+  
+<h1 class="pb-4">Explore Latest</h1>
+
+  {{#each allBlogs}}
+{{!-- 
+    <a href = "/blogs/{{_id}}" class="col text-center category__link">
+     <div class="category__img category__img--large shadow">
+        <img src="/uploads/{{picture}}" alt="{{title}}" loading="lazy">
+      </div>
+      <div > <h2> {{title}}</h2></div>
+    </a> --}}
+
+    {{#if this}}
+    <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+    {{#each this}}
+    <a href = "/blogs/{{_id}}" class="col text-center category__link">
+     <div class="category__img category__img--large shadow">
+        <img src="/public/uploads/{{picture}}" alt="{{title}}" loading="lazy" style = "width: auto height :auto;"> </img>
+      </div>
+      <div > <h2> {{title}}</h2></div>
+    </a> 
+    </div>
+    
+    {{/each}}
+
+    {{/if}}
+   
+ {{/each}}
+
+
+s

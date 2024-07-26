@@ -1,0 +1,59 @@
+<h1>{{blog.title}}</h1>
+
+<img src = '/public/uploads/{{blog.picture}}' alt = {{blog.title}} style="top: 20px; height : 150px;" > </img>
+
+<p> {{blog.body}}</p>
+
+<h4> Author : </h4> <h3> {{blog.Author}} </h3>
+
+<date > {{blog.dateCreated}}</date>
+
+<br/>
+<section>
+    <hr/>
+    
+    <button class = "LikeButton " blogId = " {{blog._id}}" onclick="updateLikes()"> </button>
+    <i class="fa fa-thumbs-o-up" aria-hidden="true" > {{blog.likes}} </i>
+    
+    <p class = "likes-error"></p>
+     
+    
+</a>
+</section>
+<hr/>
+
+<h4>Comments</h4>
+
+{{#if comments}}
+
+{{#each comments}}
+
+<div class = "Comment_Container">
+  <div class = "Comment_row">
+    <div class = "Commentimg">
+      <img src = '/public/img/{{gender}}.jpg' alt="" style="width: 100%;
+    border-radius: 50%;">
+    </div>
+    <div class="commentContent">
+      <span class = "CommentName" > {{name}}</span>
+      <span class = "Commentinfo"> {{text}}</span>
+      
+    </div>
+  </div>
+</div>
+</div>
+    
+{{/each}} 
+
+
+{{/if}}
+
+<form action="/Blogs/{{blog._id}}/comments" method="post">
+
+      <input  type = 'text' class='comment-box' name="content" placeholder=" Enter Comment"></textarea>
+      
+        <button type="submit" class="post">Comment</button>
+      
+    </form>
+
+

@@ -1,0 +1,40 @@
+
+<div class="row">
+<div class="leftcolumn">
+{{#if blogs}}
+{{#each blogs}}
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+    <a href = "/blogs/{{_id}}" class="col text-center category__link">
+      <h2>{{title}}</h2>
+      <h5>Date: {{dateCreated}}</h5>
+      <div class="myblogimg" >
+         <img src="/public/uploads/{{picture}}"style="height: 250px  ;     width: 245px; " > 
+      </div>
+    </a>
+    </div>
+
+{{/each}}
+
+{{else}}
+
+<h3> No blogs to display</h3>
+
+</div>
+</div>
+
+
+
+{{/if}}
+
+<div class="addBlogScard">
+        <p class = "element">Create blog</p>
+        <a href = "/newBlog"> 
+        <img src="/public/img/plus.png" style="Height:100px; Width: 100px">
+        </a>
+        
+</div>
+    </div>
+    </div>
+

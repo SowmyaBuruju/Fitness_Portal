@@ -1,0 +1,30 @@
+{
+  "name": "cs_29_final_project",
+  "version": "1.0.0",
+  "description": "Fitness portal",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "author": "Group_29",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.2.1",
+    "bcrypt": "^5.0.1",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.5",
+    "dotenv": "^10.0.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-ejs-layouts": "^2.5.1",
+    "express-fileupload": "^1.2.1",
+    "express-handlebars": "^5.3.4",
+    "express-session": "^1.17.2",
+    "handlebars": "^4.7.7",
+    "image-url-validator": "^1.0.4",
+    "mongodb": "^4.1.2",
+    "mongoose": "^6.4.6",
+    "nodemon": "^2.0.20"
+  }
+}

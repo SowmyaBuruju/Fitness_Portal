@@ -1,0 +1,82 @@
+<h1>Diet plan page</h1>
+<form class = "dietplansform" id = "dietplansform" method="POST" action="/dietplans">
+    <div class = "container">
+        <label for = "calories" class=" calories"> Calories : </label>
+        <input type = "number" class ="caloriesValue" name = "total_calories">
+    </div>
+    <div>
+        <label for="dietCategory"> Category</label>
+        <select name="dietCategory" id="dietCategory">
+                  <option value="vegetarian">Vegetarian</option>
+                  <option value="vegan">Vegan</option>
+                  <option value = "gluten-free">gluten-free</option>
+        </select>
+    </div>
+    <div>
+        <label for = "subtitute-diet"> Subtitute diet plan</label>
+        <select name = "subtitutediet" id = "subtitute-diet">
+            <option value = "balanced" >balanced</option>
+            <option value = "high-fiber" >high-fiber</option>
+            <option value = "high-protein" >high-protein</option>
+            <option value = "low-crab" >low-crab</option>
+        </select>
+    </div>
+
+    <div>
+    <fieldset>
+    <legend>MealType:</legend>
+    <div>
+      <input type="radio" id="Breakfast" name="MealType" value="Breakfast"
+             checked>
+      <label for="Breakfast">Breakfast</label>
+    
+      <input type="radio" id="lunch" name="MealType" value="lunch">
+      <label for="lunch">Lunch</label>
+    
+
+    
+      <input type="radio" id="dinner" name="MealType" value="dinner">
+      <label for="dinner">Dinner</label>
+    
+   
+        <input type = "radio" id = "Snack" name = "MealType" value = "Snack">
+        <label for = "Snack">Snacks</label>
+    </div>
+</fieldset>
+
+    </div>
+
+<button type=" submit">submit</button>    
+</form>
+
+{{#if isResponse}}
+
+{{#each response }}
+
+
+<ul>
+    <li><div>
+        <label for = "recipe-name"><b>{{name}}</b></label>
+        <div>
+            <img src="{{img}}" style="height: 100; width:100;"> 
+        </div>
+        <div>
+            <label>Calories:</label> {{Calories}}
+        </div>
+        </div>
+
+
+
+        <button class = "SaveRecipeButton" name="{{name}}" Cat = "{{Category}}" Subs = "{{subtitutediet}}"  onclick="saveRecipe()"> Save </button>
+        <i class="fa fa-thumbs-o-up" aria-hidden="true" >  </i>
+        <p class = "likes-error"></p>
+
+
+    </li>   
+</ul>
+
+
+{{/each}}
+
+
+{{/if}}

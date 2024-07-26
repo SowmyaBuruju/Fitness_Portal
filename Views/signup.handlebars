@@ -1,0 +1,35 @@
+<div class="err">
+    {{error}}
+</div>
+
+
+<div class="login-page">
+    <div class="form">
+        <div class="login">
+            <div class="login-header">
+                <h1>SignUp page</h1>
+            </div>  
+            <div class="alert alert-danger" id="error-div2"></div>
+        </div>
+
+        <form class="login-form" action="/signup" id="signup-form" method="POST">
+            <label for="email">Enter Email: </label>
+            <input type="text" id="email" name="email" placeholder="Type username" value="{{user.email}}" /> <br/>
+            <label for="password">Enter Password: </label>
+            <input id="password" type="password" name="password" placeholder="Type password"
+                value="{{user.password}}" /> <br/>
+            <label for="firstName">Enter First Name: </label>
+            <input type="text" id="firstName" name="firstName" placeholder="Type first name"
+                value="{{user.firstName}}" /><br/>
+            <label for="lastName">Enter Last Name: </label>
+            <input type="text" id="lastName" name="lastName" placeholder="Type last name" value="{{user.lastName}}" /> <br/>
+            <label for="age">Enter Age: </label>
+            <input type="text" id="age" name="age" placeholder="Type age" value="{{user.age}}"> <br/>
+            <label for = "Gender"> Enter Gender : </label> 
+            <input type = "text" id = "Gender" name ="Gender" placeholder= " Enter your gender" value = "{{user.gender}}" /> <br/>
+            <input type="submit" value="Register" class="btn-p" />
+            <p class="message"><a href="/login">Already have an account? Click here to log-in</a></p> <br/>
+            
+        </form>
+    </div>
+</div>

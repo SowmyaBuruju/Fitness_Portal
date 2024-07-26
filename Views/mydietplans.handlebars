@@ -1,0 +1,23 @@
+<title> My saved Diet Plans </title>
+
+{{#if response}}
+{{#each response}}
+
+<h2> {{RecipeName}} </h2>
+<img src = {{image}} atl = "{{RecipeName}}"> </img>
+<h2 > {{MealType}} Recipe </h2>
+<h3> {{Category}}</h3>
+<h3>Total Calories</h3> <p> {{Calories}}</p>
+
+{{substitutePlanType}}
+
+{{/each}}
+
+
+
+{{else}}
+<p>
+    <b> No Saved Diet Plans  </b>
+</p>
+
+{{/if}}
